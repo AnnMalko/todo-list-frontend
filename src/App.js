@@ -6,7 +6,7 @@ import { getAllMyTasks, addTask, editTask, deleteTask } from "./FetchTasks";
 function App() {
   const [tasks, setMyTasks] = useState([]);
   const [title, setTitle] = useState("");
-  const [task, setTask] = useState("");
+  const [setTask] = useState("");
   const [editing, setEditing] = useState(false);
   const [taskId, setTaskId] = useState("");
 
@@ -45,7 +45,7 @@ function App() {
       {tasks.map((task) => (
         <MyTasks
           text={task.title}
-          key={task._id}
+          key={task.id}
           updatingInInput={() => updatingInInput(task._id, task.title)}
           deleteTask={() => deleteTask(task._id, setTask)}
         />
