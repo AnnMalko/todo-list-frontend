@@ -45,7 +45,7 @@ function App() {
       {tasks.map((task) => (
         <MyTasks
           text={task.title}
-          key={task.id}
+          key={task._id}
           updatingInInput={() => updatingInInput(task._id, task.title)}
           deleteTask={() => deleteTask(task._id, setTask)}
         />
